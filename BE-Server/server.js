@@ -485,9 +485,7 @@ app.post("/ForgetPassword", async(req, res) => {
         }
         else{
             return res.status(200).json((updatePassword.rows[0]))
-        }
-       
-           
+        }        
         
         
     }
@@ -585,6 +583,25 @@ function sendOrderEmail(order, recipient_email, cname, shopName, shopNumber, col
     })
 }
 
+
+app.get("/", async(req, res) => {
+    try{
+        
+        // const getOrders = await db.query(
+        //     `SELECT o."O_ID", TO_CHAR(o."CollectionDate", \'DD/MM/YYYY\') AS "CollectionDate", t."TailorName", os."OrderCode" AS "OrderStatus", o."CustomerName", o."CustomerMobile", ps."PaymentCode" AS "PaymentStatus" , o."RemainingAmt"
+        //      FROM "Order" o , "Tailor" t , "OrderStatusCode" os, "PaymentStatusCode" ps
+        //      WHERE o."Shop"=$1
+        //      AND o."OrderStatus" = os."OS_ID"
+        //      AND o."PaymentStatus" = ps."P_ID"
+        //      AND o."AssignTo" = t."T_ID"`, [req.params.shop]
+        // )
+        const OrderList = res.json("Hello");
+        console.log(OrderList)
+    }
+    catch(err){
+        console.error(err.message)
+    }
+});
 
 
 app.listen(PORT, ()=>{console.log(`Server started on ${PORT}`)})
