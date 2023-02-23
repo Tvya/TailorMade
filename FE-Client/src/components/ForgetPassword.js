@@ -66,7 +66,7 @@ const ForgetPassword = () => {
 
   //async function to post data to DB
   const ForgetPassword = async () => {
-    const response = await fetch('/ForgetPassword',ForgetPasswordsettings);
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/ForgetPassword`,ForgetPasswordsettings);
     try{ 
 
         const data = await response.json();

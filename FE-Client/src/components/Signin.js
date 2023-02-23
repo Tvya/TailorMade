@@ -3,7 +3,7 @@ import {useNavigate } from "react-router-dom";
 import { Box, TextField, Button, InputAdornment, IconButton } from '@mui/material';
 import {Visibility, VisibilityOff} from '@mui/icons-material';
 import ForgetPassword from './ForgetPassword';
-import FP from './FP';
+
 
 const Signin = () => {
 
@@ -47,7 +47,7 @@ const Signin = () => {
 
   //async function to post data to DB
   const SignIn = async () => {
-    const response = await fetch('/SignIn', SignInsettings);
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/SignIn`, SignInsettings);
     try{ 
 
     const data = await response.json();
