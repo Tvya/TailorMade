@@ -46,7 +46,7 @@ const AddEmployee = () => {
 
     //async function to post data to DB
     const newEmployee = async () => {
-      const response = await fetch(`/AddEmployee/${shop}`, AddEmployeesettings);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/AddEmployee/${shop}`, AddEmployeesettings);
       const data = await response.json();
       
       try{ 

@@ -1,7 +1,6 @@
 {
   "name": "project4",
   "version": "0.1.0",
-  "proxy": "https://tailormadeserver.onrender.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -28,6 +27,7 @@
     "@testing-library/user-event": "^13.5.0",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "formik": "^2.2.9",
     "history": "^5.3.0",
     "moment": "^2.29.4",

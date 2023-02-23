@@ -192,7 +192,7 @@ const AddOrder = () => {
   // declare the async data fetching function
   const fetchData = async () => {
       // get the data from the api
-      const data = await fetch(`/ManageTeam/${shop}`);
+      const data = await fetch(`${process.env.REACT_APP_BASE_URL}/ManageTeam/${shop}`);
       // convert the data to json
       const json = await data.json();
 
@@ -247,7 +247,7 @@ const AddOrder = () => {
 
     //async function to post data to DB
     const newOrder = async () => {
-      const response = await fetch(`/AddOrder/${id}/${shop}`, AddOrdersettings);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/AddOrder/${id}/${shop}`, AddOrdersettings);
       try{ 
 
       const data = await response.json();

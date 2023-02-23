@@ -54,7 +54,7 @@ const handleSInputChange = (e) => {
   
       //async function to post data to DB
       const newShop = async () => {
-        const response = await fetch('/SignUp', SignUpsettings);
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/SignUp`, SignUpsettings);
         try{ 
   
         const data = await response.json();

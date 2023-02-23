@@ -38,7 +38,7 @@ const Dashboard = () => {
     // declare the async data fetching function
     const fetchData = async () => {
         // get the data from the api
-        const data = await fetch(`/Dashboard/${id}/${shop}`);
+        const data = await fetch(`${process.env.REACT_APP_BASE_URL}/Dashboard/${id}/${shop}`);
         // convert the data to json
         const json = await data.json();
   
