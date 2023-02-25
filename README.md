@@ -1,6 +1,6 @@
 # TailorMade
 
-A system for tailors to manage their orders and not forget about it 
+A system for tailors to manage their orders and not forget about the order
 
 Funtional Requirements
 
