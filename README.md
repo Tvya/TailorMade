@@ -20,6 +20,9 @@ Technolgies used (PERN stack)
 3) React
 4) Node
 
+DB SCHEMA 
+![alt text](<DB_Schema.png>)
+
 
 
 
